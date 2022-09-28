@@ -1,0 +1,39 @@
+<div *ngIf="viewMode">
+   <div *ngIf="currentTutorial.id"> 
+       <h4>Tutorail</h4>
+   </div>
+
+   <div>
+     <label>
+        <strong>Description:</strong>
+     </label>
+
+     {{currentTutorial.title}}
+   </div>
+
+
+   <div>
+      <label>
+         <strong>Status</strong>
+         {{currentTutorial.published}}
+      </label>
+   </div>
+
+
+   <a 
+    class="bdge badge-warning"
+    routerLink="/tutorials/{{currentTutorial.id}}"
+    >
+     edit
+  
+  </a>
+
+</div>
+
+<div *ngIf="!currentTutorial">
+   <br/>
+   <p>Please click on Tutorial...</p>
+</div>
+
+
+
